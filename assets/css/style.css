@@ -31,6 +31,7 @@ body{
   background: var(--clear-color);
   padding: 3rem;
   border-radius: 0.5rem; 
+  box-shadow: 0.8rem 0.8rem var(--primary-color);
 }
 
 .container-button{
@@ -40,16 +41,20 @@ body{
 }
 
 button{
-  border: none;
-  background: var(--primary-color-clear);
-  color: #fff;
+  border: 0.3rem solid #42e2b756;
+  color: var(--primary-color-clear);
   font-size: 2.5rem;
   height: 6rem; 
   width: 20rem;
   cursor: pointer;
   border-radius: 0.5rem;
-  /* transition: all 300ms ease-in-out; */
+  transition: all 200ms ease-in-out; 
 } 
+
+button:hover{
+  background: var(--primary-color-clear);
+  color: var(--clear-color);
+}
 
 .title{
   display: flex;

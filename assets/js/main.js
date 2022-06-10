@@ -18,9 +18,6 @@ function timer() {
   }
 
   const clock = document.querySelector('.timer');
-  const start = document.querySelector('.iniciar');
-  const pause = document.querySelector('.pausar');
-  const clear = document.querySelector('.zerar');
 
   document.addEventListener('click', function (event) {
     const element = event.target;
@@ -40,6 +37,12 @@ function timer() {
       clock.innerHTML = '00:00:00';
       clock.classList.remove('paused');
       seconds = 0;
+    }
+
+    if (clock.classList.contains('paused')){
+      document.querySelector('.container').style.boxShadow = "0.8rem 0.8rem #ED474A";
+    }else{
+      document.querySelector('.container').style.boxShadow = "0.8rem 0.8rem #067BC2";
     }
   });
 }
